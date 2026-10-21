@@ -1,6 +1,16 @@
 {
   "redirects": [
     {
+      "source": "/class",
+      "destination": "https://my-page-style-maker.lovable.app/free-lecture",
+      "statusCode": 302
+    },
+    {
+      "source": "/class/",
+      "destination": "https://my-page-style-maker.lovable.app/free-lecture",
+      "statusCode": 302
+    },
+    {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.dowwalabs.com" }],
       "destination": "https://dowwalabs.com/$1",
