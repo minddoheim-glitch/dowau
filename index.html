@@ -63,6 +63,7 @@
   <link rel="preload" as="image" href="image/hero5.jpg" fetchpriority="high" />
 
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/newsletter.css" />
 
   <!-- JSON-LD 구조화 데이터 (검색 결과 리치 스니펫 + AI 검색엔진용) -->
   <script type="application/ld+json">
@@ -215,6 +216,7 @@
       </div>
       <div class="nav-group">
         <div class="nav-category">콘텐츠</div>
+        <a class="nav-a" href="#newsletter" data-page="newsletter" onclick="nav('newsletter')">뉴스레터</a>
         <a class="nav-a" data-page="blog" onclick="nav('blog')">블로그</a>
         <a class="nav-a" data-page="youtube" onclick="nav('youtube')">유튜브</a>
         <a class="nav-a" data-page="ebook" onclick="nav('ebook')">전자책</a>
@@ -508,6 +510,7 @@
           </div>
         </div>
 
+        <div class="nl-home-banner"><div><h2>다음 칼럼은 메일로 만나세요</h2><p>전문성을 콘텐츠로, 콘텐츠를 사업으로 연결하는 도와유의 생각.</p></div><a href="#newsletter">뉴스레터 살펴보기 →</a></div>
         <!-- ── 섹션 8: 전자책 ── -->
         <div class="ebook-center-section">
           <h2 class="ebook-center-hl s-reveal">무료전자책 받기</h2>
@@ -1420,10 +1423,45 @@
 
     </section>
 
+    <section id="newsletter" class="page" aria-label="도와유 뉴스레터">
+      <div class="nl-page">
+        <p class="nl-eyebrow">DOWAYOU LETTER / 도와유의 칼럼</p>
+        <div class="nl-hero">
+          <div>
+            <h1>조회수 너머,<br><em>내 사업으로</em><br>이어지는 생각.</h1>
+            <p class="nl-intro">전문성을 콘텐츠로, 콘텐츠를 고객의 문의로.<br>유튜브를 사업에 연결하며 배우고 실행한 이야기를<br>한 편의 칼럼으로 보내드립니다.</p>
+            <p class="nl-signature"><strong>유튜브 코치 도와유</strong>가 씁니다.</p>
+          </div>
+          <div class="nl-form-card">
+            <h2>다음 칼럼은 메일로 만나세요</h2>
+            <p>커뮤니티 가입 없이, 이메일만으로 받아보세요.</p>
+            <form id="nl-form">
+              <label for="nl-email">이메일 주소</label>
+              <input class="nl-input" id="nl-email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="hello@example.com" required>
+              <div class="nl-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+              <label class="nl-consent"><input name="consent" type="checkbox" required><span>뉴스레터 발송을 위한 이메일 수집·이용 및 칼럼·프로그램 소식 수신에 동의합니다.</span></label>
+              <button id="nl-submit" class="nl-submit" type="submit" disabled>구독 오픈 준비 중</button>
+              <p id="nl-message" class="nl-message" role="status" aria-live="polite">구독 서비스를 확인하고 있습니다.</p>
+            </form>
+            <details class="nl-privacy"><summary>개인정보 수집·이용 안내</summary><p>수집 항목: 이메일 주소, 동의·구독 확인 기록<br>목적: 칼럼 및 프로그램 소식 발송, 구독 관리<br>보유 기간: 구독 해지 시까지. 발송 중단에 필요한 최소 기록의 처리 기준과 발송 대행사 안내는 서비스 오픈 전에 확정합니다.<br>동의를 거부할 수 있으며, 거부 시 구독 신청이 어렵습니다. 모든 발송 메일에서 구독을 해지할 수 있습니다.</p></details>
+          </div>
+        </div>
+        <div class="nl-benefits">
+          <div><span>01 / 방향</span><h3>나에게 맞는 콘텐츠</h3><p>유행을 따라가기 전에, 내 전문성과 고객이 만나는 지점을 생각합니다.</p></div>
+          <div><span>02 / 연결</span><h3>조회수에서 사업으로</h3><p>어떤 이야기가 신뢰를 만들고 문의로 이어지는지 함께 살펴봅니다.</p></div>
+          <div><span>03 / 실행</span><h3>현장에서 배운 것들</h3><p>채널 운영과 코칭에서 배운 생각을 다음 시도에 적용할 수 있게 풀어냅니다.</p></div>
+        </div>
+        <div class="nl-archive-header"><h2>쌓아가는 칼럼</h2><span>홈페이지에서 함께 읽어요</span></div>
+        <div id="nl-archive"><div class="nl-empty"><strong>첫 번째 칼럼을 준비하고 있습니다.</strong>발행한 칼럼은 이곳에 차곡차곡 쌓입니다.</div></div>
+        <div class="nl-footer"><span>도와유의 생각과 실행을 담습니다.</span><a href="#program">코칭 프로그램 살펴보기 ↗</a></div>
+      </div>
+    </section>
+
   </main>
 </div>
 
 <script src="js/nav.js"></script>
+<script src="js/newsletter.js" defer></script>
 <script>
   function initAutoScroll(track, speed) {
     track.innerHTML += track.innerHTML;

@@ -31,3 +31,11 @@ _opt_tmp/
 .local-review/
 status.json
 decisions.json
+
+# Newsletter server secrets and local database
+.env
+.env.*
+!.env.example
+.dev.vars
+.wrangler/
+*.sqlite
